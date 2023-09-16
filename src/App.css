@@ -102,3 +102,9 @@ h1 {
     width: 90%;
   }
 } */
+
+@media (max-width: 480px) {
+  .advice-box {
+    width: 80%;
+  }
+}
