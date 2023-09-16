@@ -106,12 +106,15 @@ h1 {
 @media (max-width: 480px) {
   .advice-box {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 250px;
   }
 
   .line {
-    width: 300px;
-    margin-left: 20px;
+    width: 200px;
+    margin-left: 200px;
+  }
+
+  .advice {
+    width: 70%;
   }
 }
