@@ -79,9 +79,6 @@ h1 {
 
 .circle:hover {
   cursor: pointer;
-}
-
-.circle:active {
   box-shadow: 0 0 10px 5px rgba(83, 255, 170, 0.7);
 }
 
