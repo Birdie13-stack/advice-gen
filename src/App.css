@@ -88,7 +88,8 @@ h1 {
   }
 
   .line {
-    width: 200px;
+    width: 400px;
+    margin-left: 20px;
   }
 
   .circle {
