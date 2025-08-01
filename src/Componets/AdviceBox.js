@@ -6,9 +6,12 @@ import group from "../Group.jpg";
 function AdviceBox() {
   const [adviceText, setAdviceText] = useState("");
   const [adviceNumber, setAdviceNumber] = useState("");
+  const [loading, setLoading] = useState(false);
   const apiURL = "https://api.adviceslip.com/advice";
 
   const fetchAdvice = () => {
+    setLoading(true);
+
     fetch(apiURL)
       .then((res) => res.json())
       .then((data) => {
@@ -17,6 +20,8 @@ function AdviceBox() {
           const text = data.slip.advice;
           setAdviceNumber(number);
           setAdviceText(text);
+
+          setLoading(false);
 
           // console.log(data);
         } else {
@@ -36,8 +41,7 @@ function AdviceBox() {
     <div className="advice-box">
       <h1 className="advice-number">ADVICE #{adviceNumber}</h1>
 
-      <p className="advice">{adviceText}</p>
-
+      <p className="advice">{loading ? "Loading..." : adviceText}</p>
       <svg
         width="444"
         height="16"
